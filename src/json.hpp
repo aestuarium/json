@@ -2340,7 +2340,11 @@ class basic_json
     ///////////////
 
     /// an iterator value
-    union internal_iterator
+    #ifdef _MSC_VER
+      struct internal_iterator
+    #else
+      union internal_iterator
+    #endif
     {
         /// iterator for JSON objects
         typename object_t::iterator object_iterator;
