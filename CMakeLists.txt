@@ -14,7 +14,7 @@ if(MSVC)
     add_definitions(-D_SCL_SECURE_NO_WARNINGS)
 else(MSVC)
     set(CMAKE_CXX_FLAGS
-        "-std=c++11 -stdlib=libc++"
+        "${CMAKE_CXX_FLAGS} -std=c++11"
     )
 endif(MSVC)
 

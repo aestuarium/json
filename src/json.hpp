@@ -4155,7 +4155,7 @@ basic_json_parser_59:
         {
             // conversion
             typename string_t::value_type* endptr;
-            const auto float_val = std::strtold(reinterpret_cast<typename string_t::const_pointer>(m_start),
+            const auto float_val = std::strtod(reinterpret_cast<typename string_t::const_pointer>(m_start),
                                                 &endptr);
 
             // return float_val if the whole number was translated and NAN
